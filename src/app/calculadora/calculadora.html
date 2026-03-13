@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="form-box">
+        <form #frmCalculadora="ngForm" (ngSubmit)="somar()">
+            <h2>Calculadora</h2>
+            <label for="num1">Número 1:</label>
+            <input type="number" placeholder="Número 1" name="num1" id="num1" [(ngModel)]="num1">
+            <label for="num2">Número 2:</label>
+            <input type="number" placeholder="Número 2" name="num2" id="num2" [(ngModel)]="num2">
+            <button type="submit">Somar</button>
+        </form>
+        <div class="result-box" *ngIf="resultado">
+            <p>Resultado:
+            <span id="result">{{resultado}}</span>
+            </p>
+        </div>
+    </div>
+</div>  
